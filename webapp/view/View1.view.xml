@@ -3,34 +3,10 @@
     xmlns:core="sap.ui.core"
     xmlns:p="sap.m.plugins"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="Product List">
         <Table id="idProductsTable"
             inset="false"
-            items="{Products>/}">
-            <headerToolbar>
-                <OverflowToolbar>
-                    <content>
-                        <Title text="Products" level="H2"/>
-                        <ToolbarSpacer />
-                        <ComboBox id="idPopinLayout"
-                            placeholder="Popin layout options"
-                            change="onPopinLayoutChanged">
-                            <items>
-                                <core:Item  text="Block" key="Block"/>
-                                <core:Item  text="Grid Large" key="GridLarge"/>
-                                <core:Item  text="Grid Small" key="GridSmall"/>
-                            </items>
-                        </ComboBox>
-                        <Label text="Sticky options:" />
-                        <CheckBox text="ColumnHeaders" select="onSelect"/>
-                        <CheckBox text="HeaderToolbar" select="onSelect"/>
-                        <CheckBox text="InfoToolbar" select="onSelect"/>
-                        <ToggleButton id="toggleInfoToolbar"
-                            text="Hide/Show InfoToolbar"
-                            press="onToggleInfoToolbar" />
-                    </content>
-                </OverflowToolbar>
-            </headerToolbar>
+            items="{Products>/d/results}">
             <infoToolbar>
                 <OverflowToolbar>
                     <Label text="Wide range of available products"/>
@@ -88,5 +64,8 @@
                 </ColumnListItem>
             </items>
         </Table>
+        <VBox>
+        
+        </VBox>
     </Page>
 </mvc:View>
